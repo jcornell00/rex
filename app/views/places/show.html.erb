@@ -25,7 +25,13 @@
       <dd><%= @place.lng %></dd>
 
       <dt>Owner</dt>
-      <dd><%= @place.owner_id %></dd>
+      <dd>
+        <% if @place.owner.present? %>
+          <a href="/users/<%= @place.owner_id %>">
+            <%= @place.owner.email %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>City</dt>
       <dd><%= @place.city %></dd>

@@ -35,7 +35,13 @@
         <td><%= place.description %></td>
         <td><%= place.lat %></td>
         <td><%= place.lng %></td>
-        <td><%= place.owner.email %></td>
+        <td>
+          <% if place.owner.present? %>
+            <a href="/users/<%= place.owner.id %>">
+              <%= place.owner.email %>
+            </a>
+          <% end %>
+        </td>
         <td><%= place.city %></td>
         <td>
           <a href="/places/<%= place.id %>" class="btn btn-primary">Show</a>

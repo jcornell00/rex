@@ -16,6 +16,7 @@ class PlacesController < ApplicationController
   end
 
   def show
+    @like = Like.new
     @place = Place.find(params[:id])
 
     render("places/show.html.erb")

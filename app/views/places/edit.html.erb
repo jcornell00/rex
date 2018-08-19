@@ -63,14 +63,8 @@
         <input type="text" id="lng" name="lng" placeholder="Lng" class="form-control" value="<%= @place.lng %>">
       </div>
 
-      <!-- Label and input for owner_id -->
-      <div class="form-group">
-        <label for="owner_id" class="control-label">
-          Owner
-        </label>
-
-        <%= select_tag(:owner_id, options_from_collection_for_select(User.all, :id, :email, @place.owner_id), :class => "form-control") %>
-      </div>
+      
+      
 
       <!-- Label and input for city -->
       <div class="form-group">

@@ -21,6 +21,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :feed,
+             :through => :following,
+             :source => :own_places
+
   has_many   :followers,
              :through => :received_follow_requests,
              :source => :sender

@@ -10,6 +10,10 @@ class Place < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :followers,
+             :through => :owner,
+             :source => :following
+
   # Validations
 
 end

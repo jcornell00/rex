@@ -10,6 +10,10 @@ class Place < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :fans,
+             :through => :likes,
+             :source => :user
+
   has_many   :followers,
              :through => :owner,
              :source => :following

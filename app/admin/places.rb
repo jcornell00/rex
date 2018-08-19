@@ -1,4 +1,6 @@
 ActiveAdmin.register Place do
+
+ permit_params :name, :address, :description, :lat, :lng, :owner_id, :city
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
